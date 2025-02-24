@@ -11,7 +11,7 @@ private:
 	int recompense;
 	bool enPrison;
 public:
-	brigand(const string nom = "", const string boissFavorite = "tord-boyaux", const string comportement = "mechant");
+	brigand(const string nom = "", const string boissFavorite = "tord-boyaux ", const string comportement = "mechant");
 	string getComportement();
 	int getNbDamesEnlevees();
 	int getRecompense();
