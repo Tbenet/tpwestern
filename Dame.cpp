@@ -28,3 +28,8 @@ void Dame::changeDeRobe(const string couleurRobe)
 	this->couleurRobe = couleurRobe;
 	cout << "(" << nom << ") --" << "Regarde ma nouvelle robe " << couleurRobe << " !" << endl;
 }
+
+void Dame::seFaitKidnapper()
+{
+	cout << "Au secours, je me fait kidnapper" << endl;
+}

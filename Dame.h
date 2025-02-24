@@ -1,7 +1,10 @@
 #pragma once
 #include <string>
 #include "humain.h"
+#include "brigand.h"
+#include "Dame.h"
 using namespace std;
+class cowboy;
 
 class Dame : public humain
 {
@@ -16,7 +19,6 @@ public:
 	void changeDeRobe(const string couleurRobe);
 	void seFaitKidnapper();
 	void seFaitLiberer(cowboy& cowboy);
-
 	void hurle();
 	void remercie(const cowboy& heros);
 };
