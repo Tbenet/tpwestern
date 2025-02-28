@@ -15,9 +15,9 @@ public:
 	cowboy(const string nom = "", const string boissonfav = "whisky", const string adjectif = "vaillant");
 	string getNom();
 	int getPopularite();
-	void setPopularite(const int popilarite);
+	void setPopularite(const int popularite_);
 	string getAdjectif();
-	void setAdjectif(const string adjectif);
+	void setAdjectif(const string adjectif_);
 	void sePresente();
 	/*void inrementePopularite();
 	void decrementePopularite();*/

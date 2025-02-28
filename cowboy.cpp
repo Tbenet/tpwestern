@@ -25,15 +25,17 @@ string cowboy::getAdjectif()
 	return adjectif;
 }
 
-void cowboy::setAdjectif(const string adjectif)
+void cowboy::setAdjectif(const string adjectif_)
 {
-
+	if (!adjectif_.empty())
+		adjectif = adjectif_;
 }
 
 
-void cowboy::setPopularite(const int popilarite)
+void cowboy::setPopularite(const int popularite_)
 {
-
+	if (popularite_ >= 0)
+		popularite = popularite_;
 }
 
 void cowboy::sePresente()
@@ -43,7 +45,7 @@ void cowboy::sePresente()
 
 /*void cowboy::inrementePopularite()
 {
-
+	
 }
 
 void cowboy::decrementePopularite()
@@ -53,17 +55,17 @@ void cowboy::decrementePopularite()
 
 void cowboy::tire(const brigand& brigand)
 {
-	cout << "** Le " << adjectif << " " << nom << " tire sur " << brigand.getNom << endl;
+	cout << "** Le " << adjectif << " " << nom << " tire sur " << brigand.getNom() << endl;
 }
 
 void cowboy::emprisonne(brigand& brigand)
 {
 	cout << "(" << nom << ") -- " << "Prend ça rascal !" << endl;
-	cout << brigand.seFaitEmprisonner << endl;
+	brigand.seFaitEmprisonner();
 }
 
 void cowboy::libere(Dame& dame)
 {
-	cout << "** Le " << adjectif << " " << nom << " libère " << dame.getNom << endl;
-	cout << dame.seFaitLiberer << endl;
+	cout << "** Le " << adjectif << " " << nom << " libère " << dame.getNom() << endl;
+	dame.seFaitLiberer();
 }
