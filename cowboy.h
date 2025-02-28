@@ -13,13 +13,14 @@ private:
 	int popularite;
 public:
 	cowboy(const string nom = "", const string boissonfav = "whisky", const string adjectif = "vaillant");
-	string getPopularite();
+	string getNom();
+	int getPopularite();
 	void setPopularite(const int popilarite);
 	string getAdjectif();
 	void setAdjectif(const string adjectif);
 	void sePresente();
-	void inrementePopularite();
-	void decrementePopularite();
+	/*void inrementePopularite();
+	void decrementePopularite();*/
 	void tire(const brigand& brigand);
 	void emprisonne(brigand& brigand);
 	void libere(Dame& dame);

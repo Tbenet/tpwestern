@@ -1,4 +1,6 @@
 #include "brigand.h"
+#include "Dame.h"
+#include "cowboy.h"
 #include <iostream>
 #include <string>
 using namespace std;
@@ -35,18 +37,18 @@ void brigand::sePresente() const
 	cout << "(" << nom << ") -- " << "Bonjour, je suis " << getNom() << "le " << getComportement() << " et j'aime le " << getBoissonFav() << "." << endl;
 }
 
-void brigand::kidnappe(Dame& Dame)
+void brigand::kidnappe(Dame& dame)
 {
 	if (!estEnPrison()) 
 	{
 		dame.seFaitKidnapper();
 		nbDamesEnlevees++;
 		augmenteRecompense();
-		cout << "(" << nom << ") -- " << "AH AH !" << dame.getName() << ", tu es mienne désormais !" << endl;
+		cout << "(" << nom << ") -- " << "AH AH !" << dame.getNom() << ", tu es mienne désormais !" << endl;
 	}
 }
 
-void brigand::seFaitEmprissonner(cowboy& cowboy)
+void brigand::seFaitEmprisonner(cowboy& cowboy)
 {
 	if (!estEnPrison())
 	{

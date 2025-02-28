@@ -1,4 +1,6 @@
 #include "Dame.h"
+#include "brigand.h"
+#include "cowboy.h"
 #include <iostream>
 #include <string>
 using namespace std;
@@ -31,5 +33,21 @@ void Dame::changeDeRobe(const string couleurRobe)
 
 void Dame::seFaitKidnapper()
 {
-	cout << "Au secours, je me fait kidnapper" << endl;
+	hurle;
+	cout << "(" << nom << ") --" << "Au secours, je me fait kidnapper !" << endl;
 }
+
+void Dame::seFaitLiberer(cowboy& cowboy)
+{
+	cout << "(" << nom << ") --" << "Merci " << cowboy.getNom << ", je suis enfin libre !" << endl;
+}
+
+void Dame::hurle()
+{
+	cout << "** " << nom << " hurle" << endl;
+}
+
+/*void Dame::remercie(const cowboy& heros)
+{
+
+}*/

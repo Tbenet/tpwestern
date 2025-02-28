@@ -20,7 +20,7 @@ public:
 	string getNom()const;
 	void sePresente() const;
 	void kidnappe(Dame& dame);
-	void seFaitEmprissonner(cowboy& cowboy);
+	void seFaitEmprisonner(cowboy& cowboy);
 	void augmenteRecompense(const int prix = 100);
 	void diminueRecompense(const int prix = 100);
 	bool estEnPrison() const;

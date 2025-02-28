@@ -1,8 +1,6 @@
 #pragma once
 #include <string>
 #include "humain.h"
-#include "brigand.h"
-#include "Dame.h"
 using namespace std;
 class cowboy;
 
@@ -20,6 +18,6 @@ public:
 	void seFaitKidnapper();
 	void seFaitLiberer(cowboy& cowboy);
 	void hurle();
-	void remercie(const cowboy& heros);
+	//void remercie(const cowboy& heros);
 };
 
