@@ -18,6 +18,6 @@ public:
 	void seFaitKidnapper();
 	void seFaitLiberer(cowboy& cowboy);
 	void hurle();
-	//void remercie(const cowboy& heros);
+	void remercie(cowboy& heros);
 };
 

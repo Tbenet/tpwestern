@@ -5,10 +5,8 @@
 #include <string>
 using namespace std;
 
-
-
 brigand::brigand(const string nom, const string boissFavorite, const string comportement)
-	:humain(nom, boissFavorite), comportement(comportement)
+	: humain(nom, boissFavorite), comportement(comportement), nbDamesEnlevees(0), recompense(0), enPrison(false)
 {
 }
 
@@ -34,17 +32,17 @@ string brigand::getNom() const
 
 void brigand::sePresente() const
 {
-	cout << "(" << nom << ") -- " << "Bonjour, je suis " << getNom() << "le " << getComportement() << " et j'aime le " << getBoissonFav() << "." << endl;
+	cout << "(" << nom << ") -- " << "Bonjour, je suis " << getNom() << " le " << getComportement() << " et j'aime le " << getBoissonFav() << "." << endl;
 }
 
 void brigand::kidnappe(Dame& dame)
 {
-	if (!estEnPrison()) 
+	if (!estEnPrison())
 	{
 		dame.seFaitKidnapper();
 		nbDamesEnlevees++;
-		augmenteRecompense();
-		cout << "(" << nom << ") -- " << "AH AH !" << dame.getNom() << ", tu es mienne désormais !" << endl;
+		augmenteRecompense(100); 
+		cout << "(" << nom << ") -- " << "AH AH !" << dame.getNom() << ", tu es mienne desormais !" << endl;
 	}
 }
 
@@ -53,20 +51,20 @@ void brigand::seFaitEmprisonner(cowboy& cowboy)
 	if (!estEnPrison())
 	{
 		enPrison = true;
-		cout << "(" << nom << ") -- " << "Damned, je suis fait ! " << cowboy.getNom << ", tu m'as eu !" << endl;
+		cout << "(" << nom << ") -- " << "Damned, je suis fait ! " << cowboy.getNom() << ", tu m'as eu !" << endl;
 	}
 }
 
 void brigand::augmenteRecompense(const int prix)
 {
 	if (prix > 0)
-		this->recompense + prix;
+		this->recompense += prix; 
 }
 
 void brigand::diminueRecompense(const int prix)
 {
 	if (prix > 0 && prix <= recompense)
-		this->recompense -= prix; 
+		this->recompense -= prix;  
 }
 
 bool brigand::estEnPrison() const

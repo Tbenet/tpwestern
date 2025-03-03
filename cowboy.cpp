@@ -6,7 +6,7 @@
 using namespace std;
 
 cowboy::cowboy(const string nom, const string boissonfav, const string adjectif)
-	:humain(nom, boissonfav), adjectif(adjectif), popularite(0)
+	: humain(nom, boissonfav), adjectif(adjectif), popularite(0)
 {
 }
 
@@ -31,7 +31,6 @@ void cowboy::setAdjectif(const string adjectif_)
 		adjectif = adjectif_;
 }
 
-
 void cowboy::setPopularite(const int popularite_)
 {
 	if (popularite_ >= 0)
@@ -43,14 +42,15 @@ void cowboy::sePresente()
 	cout << "(" << nom << ") -- " << "Bonjour, je suis le " << adjectif << " " << getNom() << " et j'aime le " << boissonFavorite << endl;
 }
 
-/*void cowboy::inrementePopularite()
+/*void cowboy::incrementePopularite()
 {
-	
+	popularite++;  // Augmente la popularité de 1
 }
 
 void cowboy::decrementePopularite()
 {
-
+	if (popularite > 0)  // Empêche de descendre en dessous de 0
+		popularite--;
 }*/
 
 void cowboy::tire(const brigand& brigand)
@@ -60,12 +60,12 @@ void cowboy::tire(const brigand& brigand)
 
 void cowboy::emprisonne(brigand& brigand)
 {
-	cout << "(" << nom << ") -- " << "Prend ça rascal !" << endl;
-	brigand.seFaitEmprisonner();
+	cout << "(" << nom << ") -- " << "Prend ca rascal !" << endl;
+	brigand.seFaitEmprisonner(*this);
 }
 
 void cowboy::libere(Dame& dame)
 {
-	cout << "** Le " << adjectif << " " << nom << " libère " << dame.getNom() << endl;
-	dame.seFaitLiberer();
+	cout << "** Le " << adjectif << " " << nom << " libere " << dame.getNom() << endl;
+	dame.seFaitLiberer(*this);
 }

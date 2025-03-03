@@ -12,7 +12,7 @@ Dame::Dame(const string nom, const string boissonfav, const string couleurRobe)
 
 string Dame::getNom() const
 {
-	return "Mise " + nom;
+	return "Miss " + nom;
 }
 
 string Dame::getEtat() const
@@ -33,21 +33,21 @@ void Dame::changeDeRobe(const string couleurRobe)
 
 void Dame::seFaitKidnapper()
 {
-	hurle;
+	hurle();
 	cout << "(" << nom << ") --" << "Au secours, je me fait kidnapper !" << endl;
 }
 
 void Dame::seFaitLiberer(cowboy& cowboy)
 {
-	cout << "(" << nom << ") --" << "Merci " << cowboy.getNom << ", je suis enfin libre !" << endl;
+	remercie(cowboy);
 }
 
 void Dame::hurle()
 {
-	cout << "** " << nom << " hurle" << endl;
+	cout << "** " << getNom() << " hurle" << endl;
 }
 
-/*void Dame::remercie(const cowboy& heros)
+void Dame::remercie(cowboy& heros)
 {
-
-}*/
+	cout << "(" << nom << ") --" << "Merci " << heros.getNom() << ", je suis enfin libre !" << endl;
+}

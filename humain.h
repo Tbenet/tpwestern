@@ -4,6 +4,7 @@
 using namespace std;
 class humain
 {
+
 protected:
 	string nom;
 	string boissonFavorite;
