@@ -4,6 +4,7 @@
 using namespace std;
 class humain
 {
+
 protected:
 	string nom;
 	string boissonFavorite;
@@ -11,7 +12,7 @@ protected:
 public:
 	humain(const string nom="", const string boissonFavorite="eau");
 	string getBoissonFav() const;
-	string getName();
+	string getNom();
 	void sePresente();
 	void boit();
 	void setBoissonFav(const string nouvelleBoissonFav);

@@ -18,7 +18,7 @@ void humain::setBoissonFav(const string nouvelleBoissonFav)
 		boissonFavorite = nouvelleBoissonFav;
 }
 
-string humain::getName()
+string humain::getNom()
 {
 	return nom ;
 }

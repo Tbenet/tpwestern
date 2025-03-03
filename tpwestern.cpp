@@ -6,12 +6,41 @@
 #include "humain.h"
 #include "Dame.h"
 #include "cowboy.h"
+#include "brigand.h"
 
 using namespace std;
 
 int main()
 {
-	cowboy lucky("Lucky Luck");
+	cowboy lucky("Lucky Luke", "coca cola");
+	Dame jenny("Jenny");
+	brigand joe("Joe");
+
+	lucky.sePresente();
+	jenny.sePresente();
+
+	joe.sePresente();
+	joe.kidnappe(jenny);
+
+	lucky.sePresente();
+	joe.sePresente();
+	lucky.tire(joe);
+	lucky.emprisonne(joe);
+	lucky.libere(jenny);
+	
+	
+
+
+
+
+
+
+
+
+
+	
+	
+	/*cowboy lucky("Lucky Luck");
 	Dame jenny("Jenny");
 
 	lucky.sePresente();
@@ -22,20 +51,12 @@ int main()
 	jenny.boit();
 	
 	return 0;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/*humain lucky("Lucky Luke", "coca");
+
+
+
+
+
+	humain lucky("Lucky Luke", "coca");
 
 	cout << "Une histoire sur " << lucky.getName() << endl;
 	lucky.sePresente();
