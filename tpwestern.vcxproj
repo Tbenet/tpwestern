@@ -151,7 +151,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="barman.cpp" />
     <ClCompile Include="brigand.cpp" />
     <ClCompile Include="cowboy.cpp" />
     <ClCompile Include="Dame.cpp" />
@@ -159,7 +158,6 @@
     <ClCompile Include="tpwestern.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="barman.h" />
     <ClInclude Include="brigand.h" />
     <ClInclude Include="cowboy.h" />
     <ClInclude Include="Dame.h" />
